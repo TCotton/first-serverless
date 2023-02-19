@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: hello-world
+service: twentyfour-hour-video
 # app and org for use with dashboard.serverless.com
 #app: your-app-name
 #org: your-org-name
@@ -26,7 +26,7 @@ provider:
 
 # you can overwrite defaults here
 #  stage: dev
-#  region: us-east-1
+  region: us-east-1
 
 # you can add statements to the Lambda function's IAM Role here
 #  iam:
@@ -57,6 +57,13 @@ provider:
 #    - '!exclude-me-dir/**'
 #    - include-me.js
 #    - include-me-dir/**
+
+custom:
+  upload-bucket: mybuckets3sothereokayupload
+  transcode-bucket: mybuckets3sothereokay
+  transcode-video-role: arn:aws:iam::347216043440:role/transcode-video
+  media-endpoint: https://q25wbt2lc.mediaconvert.us-east-1.amazonaws.com
+  media-role: arn:aws:iam::347216043440:role/transcode-video
 
 functions:
   hello:
